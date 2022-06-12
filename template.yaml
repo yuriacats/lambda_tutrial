@@ -30,7 +30,7 @@ Resources:
     Type: AWS::Serverless::Function
     codeUri: src/handlers/
     Properties:
-      Handler: src/handlers/get-all-items.getAllItemsHandler
+      Handler: get-all-items.getAllItemsHandler
       Runtime: nodejs16.x
       Architectures:
         - x86_64
@@ -59,7 +59,7 @@ Resources:
     Type: AWS::Serverless::Function
     codeUri: src/handlers/
     Properties:
-      Handler: src/handlers/get-by-id.getByIdHandler
+      Handler: get-by-id.getByIdHandler
       Runtime: nodejs16.x
       Architectures:
         - x86_64
@@ -88,7 +88,7 @@ Resources:
     Type: AWS::Serverless::Function
     codeUri: src/handlers/
     Properties:
-      Handler: src/handlers/put-item.putItemHandler
+      Handler: put-item.putItemHandler
       Runtime: nodejs16.x
       Architectures:
         - x86_64
