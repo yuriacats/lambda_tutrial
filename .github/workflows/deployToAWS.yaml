@@ -40,7 +40,7 @@ jobs:
       - name: package Stack
         run: |
             aws cloudformation package \
-            --template template.yaml \
+            --template sample-Nodeapp/template.yaml \
             --s3-bucket newblogpost \
             --output json > packaged-template.yaml
       - name: look at package
