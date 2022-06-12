@@ -19,7 +19,7 @@ Globals:
   Function:
     Tracing: Active
   Api:
-    TracingEnabled: True
+  TracingEnabled: True
 
 Resources:
   # Each Lambda function is defined by properties:
@@ -28,9 +28,9 @@ Resources:
   # This is a Lambda function config associated with the source code: get-all-items.js
   getAllItemsFunction:
     Type: AWS::Serverless::Function
+    CodeUri: src/handlers/get-all-items
     Properties:
-      CodeUri: src/handlers/
-      Handler: get-all-items.getAllItemsHandler
+      Handler: getAllItemsHandler
       Runtime: nodejs16.x
       Architectures:
         - x86_64
@@ -57,8 +57,8 @@ Resources:
   # This is a Lambda function config associated with the source code: get-by-id.js
   getByIdFunction:
     Type: AWS::Serverless::Function
+    CodeUri: src/handlers/
     Properties:
-      CodeUri: src/handlers/
       Handler: get-by-id.getByIdHandler
       Runtime: nodejs16.x
       Architectures:
@@ -86,11 +86,11 @@ Resources:
   # This is a Lambda function config associated with the source code: put-item.js
   putItemFunction:
     Type: AWS::Serverless::Function
+    CodeUri: src/handlers/
     Properties:
-      CodeUri: src/handlers/
       Handler: put-item.putItemHandler
       Runtime: nodejs16.x
-      Architectures:
+  Architectures:
         - x86_64
       MemorySize: 128
       Timeout: 100
