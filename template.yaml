@@ -90,7 +90,7 @@ Resources:
     Properties:
       Handler: put-item.putItemHandler
       Runtime: nodejs16.x
-    Architectures:
+      Architectures:
         - x86_64
       MemorySize: 128
       Timeout: 100
