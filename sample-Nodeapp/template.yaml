@@ -28,6 +28,7 @@ Resources:
   # This is a Lambda function config associated with the source code: get-all-items.js
   getAllItemsFunction:
     Type: AWS::Serverless::Function
+    codeUri: src/handlers/
     Properties:
       Handler: src/handlers/get-all-items.getAllItemsHandler
       Runtime: nodejs16.x
@@ -56,6 +57,7 @@ Resources:
   # This is a Lambda function config associated with the source code: get-by-id.js
   getByIdFunction:
     Type: AWS::Serverless::Function
+    codeUri: src/handlers/
     Properties:
       Handler: src/handlers/get-by-id.getByIdHandler
       Runtime: nodejs16.x
@@ -84,6 +86,7 @@ Resources:
   # This is a Lambda function config associated with the source code: put-item.js
   putItemFunction:
     Type: AWS::Serverless::Function
+    codeUri: src/handlers/
     Properties:
       Handler: src/handlers/put-item.putItemHandler
       Runtime: nodejs16.x
