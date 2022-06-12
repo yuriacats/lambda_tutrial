@@ -17,9 +17,10 @@ Transform:
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
+    Runtime: nodejs16.x
     Tracing: Active
   Api:
-  TracingEnabled: True
+    TracingEnabled: True
 
 Resources:
   # Each Lambda function is defined by properties:
@@ -31,7 +32,6 @@ Resources:
     CodeUri: src/handlers/get-all-items
     Properties:
       Handler: getAllItemsHandler
-      Runtime: nodejs16.x
       Architectures:
         - x86_64
       MemorySize: 128
@@ -60,7 +60,6 @@ Resources:
     CodeUri: src/handlers/
     Properties:
       Handler: get-by-id.getByIdHandler
-      Runtime: nodejs16.x
       Architectures:
         - x86_64
       MemorySize: 128
@@ -89,7 +88,6 @@ Resources:
     CodeUri: src/handlers/
     Properties:
       Handler: put-item.putItemHandler
-      Runtime: nodejs16.x
       Architectures:
         - x86_64
       MemorySize: 128
