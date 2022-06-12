@@ -41,6 +41,6 @@ jobs:
       - name: Deploy to AWS CloudFormation
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
-          name: Lambda_Tutrial
+          name: LambdaTutrial
           template: sample-Nodeapp/template.yaml
           
