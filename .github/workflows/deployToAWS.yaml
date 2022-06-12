@@ -42,5 +42,5 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: Lambda Tutrial
-          template: sample-Nodeapp/templates.yaml
+          template: sample-Nodeapp/template.yaml
           
