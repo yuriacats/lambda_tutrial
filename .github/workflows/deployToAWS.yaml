@@ -43,4 +43,4 @@ jobs:
         with:
           name: LambdaTutrial
           template: sample-Nodeapp/template.yaml
-          
+          capabilities: [CAPABILITY_AUTO_EXPAND]
