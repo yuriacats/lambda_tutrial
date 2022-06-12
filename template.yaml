@@ -91,7 +91,7 @@ Resources:
       Handler: put-item.putItemHandler
       Runtime: nodejs16.x
   Architectures:
-        - x86_64
+      - x86_64
       MemorySize: 128
       Timeout: 100
       Description: A simple example includes a HTTP post method to add one item to a DynamoDB table.
