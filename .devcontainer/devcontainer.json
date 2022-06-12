@@ -11,17 +11,10 @@
 			"VARIANT": "16-bullseye"
 		}
 	},
-
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"dbaeumer.vscode-eslint"
-			]
-		}
-	},
+	"workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind",
+	"extensions": [
+		"dbaeumer.vscode-eslint"
+	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -36,5 +29,5 @@
 		"github-cli": "latest",
 		"aws-cli": "latest"
 	},
-	"workspaceFolder": "${localWorkspaceFolder}",
+	"workspaceFolder": "${localWorkspaceFolder}", // Configure tool-specific properties.
 }
