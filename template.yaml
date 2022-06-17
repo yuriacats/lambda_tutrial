@@ -19,8 +19,6 @@ Globals:
   Function:
     Runtime: nodejs16.x
     Tracing: Active
-  Api:
-    TracingEnabled: True
 
 Resources:
   # Each Lambda function is defined by properties:
