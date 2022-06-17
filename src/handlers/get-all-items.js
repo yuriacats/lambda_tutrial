@@ -12,7 +12,7 @@ const docClient = new dynamodb.DocumentClient();
  */
 exports.getAllItemsHandler = async (event) => {
     if (event.httpMethod !== 'GET') {
-        throw new Error(`getAllItems only accept GET method, you tried: ${event.httpMethod}`);
+        throw new Error(`getAllItems only GET method, you tried: ${event.httpMethod}`);
     }
     // All log statements are written to CloudWatch
     console.info('received:', event);
@@ -21,7 +21,7 @@ exports.getAllItemsHandler = async (event) => {
     // https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html#scan-property
     // https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Scan.html
     var params = {
-        TableName : tableName
+        TableName: tableName
     };
     const data = await docClient.scan(params).promise();
     const items = data.Items;
