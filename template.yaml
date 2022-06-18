@@ -26,9 +26,9 @@ Resources:
 
   # This is a Lambda function config associated with the source code: get-all-items.js
   getAllItemsFunction:
-    Type: AWS::Lambda::Function
+    Type: AWS::Serverless::Function
     Properties:
-      Code: src/handlers/
+      CodeUri: src/handlers/
       Handler: get-all-items.getAllItemsHandler
       Architectures:
         - x86_64
@@ -54,9 +54,9 @@ Resources:
 
   # This is a Lambda function config associated with the source code: get-by-id.js
   getByIdFunction:
-    Type: AWS::Lambda::Function
+    Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./src/handlers/
+      CodeUri: src/handlers/
       Handler: get-by-id.getByIdHandler
       Architectures:
         - x86_64
@@ -82,10 +82,10 @@ Resources:
 
   # This is a Lambda function config associated with the source code: put-item.js
   putItemFunction:
-    Type: AWS::Lambda::Function
+    Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./src/handlers/put-item.js
-      Handler: putItemHandler
+      CodeUri: src/handlers/put-item.js
+      Handler: put-item.putItemHandler
       Architectures:
         - x86_64
       MemorySize: 128
