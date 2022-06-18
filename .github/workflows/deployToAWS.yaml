@@ -37,6 +37,8 @@ jobs:
         with:
             role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/BlogBot
             aws-region: ap-northeast-1
+      - name: build to AWS CloudFormation
+        run: sam build 
 
       - name: Deploy to AWS CloudFormation
         uses: aws-actions/aws-cloudformation-github-deploy@v1
