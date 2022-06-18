@@ -54,7 +54,7 @@ Resources:
 
   # This is a Lambda function config associated with the source code: get-by-id.js
   getByIdFunction:
-    Type: AWS::Serverless::Function
+    Type: AWS::Lambda::Function
     Properties:
       CodeUri: ./src/handlers/
       Handler: get-by-id.getByIdHandler
@@ -82,7 +82,7 @@ Resources:
 
   # This is a Lambda function config associated with the source code: put-item.js
   putItemFunction:
-    Type: AWS::Serverless::Function
+    Type: AWS::Lambda::Function
     Properties:
       CodeUri: ./src/handlers/put-item.js
       Handler: putItemHandler
