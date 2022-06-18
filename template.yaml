@@ -84,7 +84,7 @@ Resources:
   putItemFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/handlers/put-item.js
+      CodeUri: src/handlers/
       Handler: put-item.putItemHandler
       Architectures:
         - x86_64
