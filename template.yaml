@@ -56,7 +56,7 @@ Resources:
   getByIdFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/handlers/
+      CodeUri: ./src/handlers/
       Handler: get-by-id.getByIdHandler
       Architectures:
         - x86_64
@@ -84,7 +84,7 @@ Resources:
   putItemFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/handlers/put-item.js
+      CodeUri: ./src/handlers/put-item.js
       Handler: putItemHandler
       Architectures:
         - x86_64
