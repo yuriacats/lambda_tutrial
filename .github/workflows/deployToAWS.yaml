@@ -45,4 +45,5 @@ jobs:
         with:
           name: LambdaTutrial
           template: .aws-sam/build/template.yaml
+          no-delete-failed-changeset: 1
           capabilities: "CAPABILITY_AUTO_EXPAND"
