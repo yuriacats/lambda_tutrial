@@ -28,7 +28,7 @@ Resources:
   getAllItemsFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: src/handlers/
+      Code: src/handlers/
       Handler: get-all-items.getAllItemsHandler
       Architectures:
         - x86_64
