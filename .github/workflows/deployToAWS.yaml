@@ -44,5 +44,5 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: LambdaTutrial
-          template: template.yaml
+          template: .aws-sam/build/template.yaml
           capabilities: "CAPABILITY_AUTO_EXPAND"
