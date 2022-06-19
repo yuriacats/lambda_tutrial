@@ -40,11 +40,11 @@ jobs:
       - name: build to AWS CloudFormation
         run: sam build 
       - name: pacage AWS cloudFormation
-        run: sam package --s3-bucket
+        run: sam package --template-output-path dev-template.yaml --template .aws-sam/build/template.yaml
       - name: Deploy to AWS CloudFormation
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: LambdaTutrial
-          template: .aws-sam/build/template.yaml
+          template: dev-tamplate.yaml
           no-delete-failed-changeset: 1
           capabilities: "CAPABILITY_AUTO_EXPAND"
