@@ -39,7 +39,8 @@ jobs:
             aws-region: ap-northeast-1
       - name: build to AWS CloudFormation
         run: sam build 
-
+      - name: pacage AWS cloudFormation
+        run: sam package
       - name: Deploy to AWS CloudFormation
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
