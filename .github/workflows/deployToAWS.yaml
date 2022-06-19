@@ -40,7 +40,7 @@ jobs:
       - name: build to AWS CloudFormation
         run: sam build 
       - name: pacage AWS cloudFormation
-        run: sam package
+        run: sam package --s3-bucket
       - name: Deploy to AWS CloudFormation
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
