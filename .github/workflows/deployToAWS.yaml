@@ -47,4 +47,4 @@ jobs:
           name: LambdaTutrial
           template: dev-tamplate.yaml
           no-delete-failed-changeset: 1
-          # capabilities: "CAPABILITY_AUTO_EXPAND,CAPABILITY_AUTO_EXPAND" 
+          capabilities: "CAPABILITY_AUTO_EXPAND,CAPABILITY_AUTO_EXPAND" 
